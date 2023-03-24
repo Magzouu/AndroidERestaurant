@@ -4,8 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import fr.isen.pietri.androiderestaurant.databinding.ActivityHomeBinding
@@ -24,7 +22,7 @@ class HomeActivity : AppCompatActivity() {
         entree.setOnClickListener {
             Log.d("HomeActivity", "vous avez cliqué sur entrée")
             Toast.makeText(this,"liste des entrées", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, Category_Activity::class.java)
+            val intent = Intent(this, CategoryActivity::class.java)
             intent.putExtra("category","Entrees")
             startActivity(intent)
             val categoryName = intent.getStringExtra("entrees")
@@ -35,7 +33,7 @@ class HomeActivity : AppCompatActivity() {
         plat.setOnClickListener {
             Log.d("HomeActivity", "vous avez cliqué sur plats")
             Toast.makeText(this,"liste des plats", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, Category_Activity::class.java)
+            val intent = Intent(this, CategoryActivity::class.java)
             intent.putExtra("category","Plats")
             startActivity(intent)
             val categoryName = intent.getStringExtra("plats")
@@ -46,7 +44,7 @@ class HomeActivity : AppCompatActivity() {
         dessert.setOnClickListener {
             Log.d("HomeActivity", "vous avez cliqué sur dessert")
             Toast.makeText(this,"liste des Dessert", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, Category_Activity::class.java)
+            val intent = Intent(this, CategoryActivity::class.java)
             intent.putExtra("category","Desserts")
             startActivity(intent)
             val categoryName = intent.getStringExtra("Dessert")

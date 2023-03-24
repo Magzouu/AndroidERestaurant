@@ -28,7 +28,7 @@ class CategoryAdapter(val dishes: ArrayList<String>, val onDishClickListener: (S
         }
     }
 
-    fun updateDishes(dishesFromAPI:){
+    fun updateDishes(dishesFromAPI:ArrayList<String>){
 
     }
 
