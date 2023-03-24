@@ -55,6 +55,7 @@
             android:id="@+id/linearLayoutEntrees"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -66,17 +67,25 @@
 
             <Button
                 android:id="@+id/boutonEntrees"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@drawable/mc_btn_v2"
+                android:fontFamily="@font/minecraft_font"
                 android:onClick="on_button_entrees_click"
-                android:text="Entrées" />
+                android:text="Entrees"
+                android:textColor="#FFFFFF"
+                app:backgroundTint="#00FFFFFF"
+                app:backgroundTintMode="add"
+                app:iconTint="#FFFFFF"
+                app:strokeColor="#FFFFFF" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/LinearLayoutPlats"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -87,12 +96,17 @@
                 app:srcCompat="@drawable/cadre_steak" />
 
             <Button
-                android:id="@+id/boutonDesserts"
+                android:id="@+id/boutonPlats"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@drawable/mc_btn_v2"
+                android:fontFamily="@font/minecraft_font"
                 android:onClick="on_button_plats_click"
-                android:text="Plats" />
+                android:text="Plats"
+                android:textColor="#FFFFFF"
+                app:backgroundTint="#00FFFFFF"
+                app:backgroundTintMode="add" />
         </LinearLayout>
 
         <LinearLayout
@@ -103,7 +117,7 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/imageDesserts"
+                android:id="@+id/imagePlats"
                 android:layout_width="84dp"
                 android:layout_height="84dp"
                 app:srcCompat="@drawable/carotte_gateau" />
@@ -111,10 +125,15 @@
             <Button
                 android:id="@+id/boutonDesserts"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@drawable/mc_btn_v2"
+                android:fontFamily="@font/minecraft_font"
                 android:onClick="on_button_desserts_click"
-                android:text="Desserts" />
+                android:text="Desserts"
+                android:textColor="#FFFFFF"
+                app:backgroundTint="#00FFFFFF"
+                app:backgroundTintMode="add" />
         </LinearLayout>
     </LinearLayout>
 
