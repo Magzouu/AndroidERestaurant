@@ -23,7 +23,7 @@ class HomeActivity : AppCompatActivity() {
             Log.d("HomeActivity", "vous avez cliqué sur entrée")
             Toast.makeText(this,"liste des entrées", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, CategoryActivity::class.java)
-            intent.putExtra("category","Entrees")
+            intent.putExtra("category","Entrées")
             startActivity(intent)
             val categoryName = intent.getStringExtra("entrees")
         }
