@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">AndroidERestaurant</string>
+    <string name="TITLE">C\'EST LE TITRE</string>
+    <string name="title">Bienvenue chez</string>
+
+    <string-array name="starter">
+        <item> Entrée 1 </item>
+        <item> Entrée 2 </item>
+        <item> Entrée 4 </item>
+        <item> Entrée 5 </item>
+        <item> Entrée 6 </item>
+        <item> Entrée 7 </item>
+        <item> Entrée 8 </item>
+        <item> Entrée 9 </item>
+        <item> Entrée 10 </item>
+        <item> Entrée 11 </item>
+        <item> Entrée 12 </item>
+        <item> Entrée 13 </item>
+        <item> Entrée 14 </item>
+        <item> Entrée 15 </item>
+        <item> Entrée 16 </item>
+        <item> Entrée 17 </item>
+        <item> Entrée 18 </item>
+        <item> Entrée 19 </item>
+        <item> Entrée 20 </item>
+    </string-array>
+
+    <string-array name="dishes">
+        <item> Plat 1 </item>
+        <item> Plat 2 </item>
+        <item> Plat 4 </item>
+        <item> Plat 5 </item>
+        <item> Plat 6 </item>
+        <item> Plat 7 </item>
+        <item> Plat 8 </item>
+        <item> Plat 9 </item>
+        <item> Plat 10 </item>
+        <item> Plat 11 </item>
+        <item> Plat 12 </item>
+        <item> Plat 13 </item>
+        <item> Plat 14 </item>
+        <item> Plat 15 </item>
+        <item> Plat 16 </item>
+        <item> Plat 17 </item>
+        <item> Plat 18 </item>
+        <item> Plat 19 </item>
+        <item> Plat 20 </item>
+    </string-array>
+
+    <string-array name="desserts">
+        <item> Dessert 1 </item>
+        <item> Dessert 2 </item>
+        <item> Dessert 4 </item>
+        <item> Dessert 5 </item>
+        <item> Dessert 6 </item>
+        <item> Dessert 7 </item>
+        <item> Dessert 8 </item>
+        <item> Dessert 9 </item>
+        <item> Dessert 10 </item>
+        <item> Dessert 11 </item>
+        <item> Dessert 12 </item>
+        <item> Dessert 13 </item>
+        <item> Dessert 14 </item>
+        <item> Dessert 15 </item>
+        <item> Dessert 16 </item>
+        <item> Dessert 17 </item>
+        <item> Dessert 18 </item>
+        <item> Dessert 19 </item>
+        <item> Dessert 20 </item>
+    </string-array>
+</resources>
