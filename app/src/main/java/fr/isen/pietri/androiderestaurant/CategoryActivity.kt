@@ -27,26 +27,6 @@ class CategoryActivity : AppCompatActivity() {
         //setContentView(R.layout.activity_category)    //pas 2 fois le setContentView avec (R.layout.activity_category) le dernier sera pris en compte
         setContentView(binding.root)
 
-
-        /*val category =
-            intent.getStringExtra("category") // Récupère le nom de la catégorie passé en argument
-            supportActionBar?.title = category // Définit le titre de la page comme le nom de la catégorie
-
-        val menuItems = when (category) { // selectionne la bonne liste en fonction de la categorie
-            "Entrees" -> resources.getStringArray(R.array.starter).toList()
-            "Plats" -> resources.getStringArray(R.array.dishes).toList()
-            "Desserts" -> resources.getStringArray(R.array.desserts).toList()
-            else -> emptyList<String>()
-        }
-
-        //val dishes = resources.getStringArray(R.array.dishes).toList() as ArrayList
-        binding.categoryRecyclerView.layoutManager = LinearLayoutManager(this) //les éléments vont s'ordonnancer de manière linéaire
-        binding.categoryRecyclerView.adapter = CategoryAdapter(menuItems as ArrayList){
-            val intent = Intent(this, DetailActivity::class.java)
-            intent.putExtra("dish", it);
-            startActivity(intent)
-        }*/
-
         categoryA = intent.getStringExtra("category") ?: ""
         binding.categoryTitle.text = categoryA
 
@@ -60,9 +40,9 @@ class CategoryActivity : AppCompatActivity() {
         val request = JsonObjectRequest(
             Request.Method.POST, url, body,
             { response ->
-                Log.d("CategoryActivity", "ça marche")
+                Log.d("CategoryActivity", "ça fonctionneeeeee")
                 val data = Gson().fromJson(response.toString(), DataResult::class.java)
-                //val dishes = data.data[0].items.map{it.nameFr ?: ""}.toList() as ArrayList
+                val dishes = data.data[0].items.map{it.nameFr ?: ""}.toList() as ArrayList
                 handleAPIData(response.toString())
             },
             { error ->
@@ -74,21 +54,18 @@ class CategoryActivity : AppCompatActivity() {
     }
 
     private fun handleAPIData(data: String) {
-        val dishesResult = Gson().fromJson(data, DataResult::class.java)
-        val dishCategory = dishesResult.data.firstOrNull { it.nameFr == categoryA }
-        val platList = arrayListOf<Item>()
+        val platRes = Gson().fromJson(data, DataResult::class.java)
+        val dishList = arrayListOf<Item>()
 
-        for (dishCat in dishesResult.data) {
-            for (dish in dishCat.items) {
-                Log.d("KONAR", dishCat.nameFr ?: "la bite")
-                Log.d("KONASS", categoryA)
-                if (dishCat.nameFr == categoryA) {
-                    platList.add(dish)
+        for (platCategory in platRes.data) {
+            for (dish in platCategory.items) {
+                if (platCategory.nameFr == categoryA) {
+                    dishList.add(dish)
                 }
             }
         }
 
-        adapter = CategoryAdapter(platList) {
+        adapter = CategoryAdapter(dishList) {
             val intent = Intent(this, DetailActivity::class.java)
             intent.putExtra("dish", it)
             startActivity(intent)

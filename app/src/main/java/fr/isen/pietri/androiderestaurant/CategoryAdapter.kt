@@ -3,6 +3,7 @@ package fr.isen.pietri.androiderestaurant
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -27,17 +28,13 @@ class CategoryAdapter(private var dishes: ArrayList<Item>, val onDishClickListen
 
     override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
         val dish = dishes[position]
-        /*holder.dishName.text = dish.nameFr
-
-        holder.itemView.setOnClickListener{
-            onDishClickListener(dish)
-        }*/
 
         holder.dishName.text = dish.nameFr
-        //holder.dishPrice.text = item.prices[0].price ?:""
-        if (dish.images[0].isNotEmpty()){
+
+        if (dish.images[0].isNotEmpty())
+        {
             Picasso.get().load(dishes[position].images[0])
-                .placeholder(R.drawable.ic_launcher_background)
+                .placeholder(R.drawable.crumate)    // mettre le crumate si l'image n'est pas trouvée
                 .into(holder.dishImage)
         }
         holder.itemView.setOnClickListener {

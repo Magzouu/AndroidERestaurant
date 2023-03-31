@@ -20,58 +20,31 @@ class HomeActivity : AppCompatActivity() {
 
         val entree = findViewById<TextView>(R.id.boutonEntrees)
         entree.setOnClickListener {
-            Log.d("HomeActivity", "vous avez cliqué sur entrée")
+            Log.d("HomeActivity", "LES ENTREES !!")
             Toast.makeText(this,"liste des entrées", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, CategoryActivity::class.java)
             intent.putExtra("category","Entrées")
             startActivity(intent)
-            val categoryName = intent.getStringExtra("entrees")
         }
 
 
         val plat = findViewById<TextView>(R.id.boutonPlats)
         plat.setOnClickListener {
-            Log.d("HomeActivity", "vous avez cliqué sur plats")
+            Log.d("HomeActivity", "LES PLATS !!")
             Toast.makeText(this,"liste des plats", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, CategoryActivity::class.java)
             intent.putExtra("category","Plats")
             startActivity(intent)
-            val categoryName = intent.getStringExtra("plats")
         }
 
 
         val dessert = findViewById<TextView>(R.id.boutonDesserts)
         dessert.setOnClickListener {
-            Log.d("HomeActivity", "vous avez cliqué sur dessert")
+            Log.d("HomeActivity", "LES DESSERTS !!")
             Toast.makeText(this,"liste des Dessert", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, CategoryActivity::class.java)
             intent.putExtra("category","Desserts")
             startActivity(intent)
-            val categoryName = intent.getStringExtra("Dessert")
         }
     }
-
-
-
-
-    /*public fun on_button_entrees_click(v: View) {
-        val toast: Toast = Toast.makeText(this, "Carrot !", Toast.LENGTH_LONG)
-        toast.show()
-    }
-
-    public fun on_button_plats_click(v: View) {
-        val toast: Toast = Toast.makeText(this, "Coooow !", Toast.LENGTH_LONG)
-        toast.show()
-    }
-
-    public fun on_button_desserts_click(v: View) {
-        val toast: Toast = Toast.makeText(this, "Cackeeee !", Toast.LENGTH_LONG)
-        toast.show()
-    }
-
-    private fun openMenu(v: View) {
-        val intent = Intent(v.context, Category_Activity::class.java)
-        intent.putExtra("dish_type", (v as Button).text.toString())
-        v.context.startActivity(intent)
-    }*/
 }
